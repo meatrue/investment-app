@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --vw-sm: 320px;
+    --vw-md: 600px;
+    --vw-xl: 1280px;
+
+    --max-width: 800px;
+    --min-width: 320px;
+    --max-height: 700px;
+    --min-height: 700px;
+    --tab-height-mobile: 40px;
+    --tab-height: 50px;
+
+    --padding-default: 32px;
+    --padding-mobile: 24px;
+    --padding-nav-top: 2px;
+
+    --main-border-width: 2px;
+
+    --main-height: 500px;
+    --main-height-mobile: calc(100vh - var(--tab-height-mobile) - var(--padding-nav-top) - var(--main-border-width) * 2);
+
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-primary: #222222;
+    --color-light: #dedeec;
+  }
+
+  *,
+  *::before,
+  *::after {
+    @apply box-border;
+  }
+
+  html,
+  body {
+    @apply m-0 p-0 min-h-screen;
+  }
+
+  html {
+    @apply text-mobile md:text-default leading-default text-primary font-sans font-normal not-italic;
+  }
+
+  body {
+    @apply flex flex-col w-full h-full bg-white;
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  #root {
+    @apply grow flex flex-col justify-stretch items-stretch w-full;  
+  }
+
+  main {
+    @apply grow;
+  }
+
+  a {
+    @apply text-black;
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+}

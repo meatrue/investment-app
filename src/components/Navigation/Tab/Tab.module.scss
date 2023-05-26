@@ -1,0 +1,22 @@
+.link {
+  @apply overflow-hidden h-tabHeightMobile md:h-tabHeight px-[2px] md:px-[10px]
+  leading-[40px] md:leading-[50px] text-center font-semibold whitespace-nowrap text-ellipsis
+  border-[1px] border-t-[2px] border-b-0 border-black rounded-tab rounded-b-none
+  transition-colors duration-[80ms] hover:bg-light;
+
+  &:first-child {
+    @apply border-l-0;
+  }
+
+  &:last-child {
+    @apply border-r-0;
+  }
+
+  &:not(:hover) {
+    transition-duration: 400ms;
+  }
+}
+
+.active {
+  @apply bg-light;
+}

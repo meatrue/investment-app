@@ -1,0 +1,16 @@
+.listItem {
+  @apply grid grid-cols-2 justify-items-center py-[10px] md:py-[14px]
+  border-b-[2px] border-light;
+
+  &:first-child {
+    @apply border-t-0;
+  }
+
+  &:last-child {
+    @apply border-b-0;
+  }
+}
+
+.listTitle {
+  @apply font-semibold;
+}
